@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap");
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+
+  /* for custom cursor */
+  cursor: url("../images/cursor.png"), auto;
+
+  /* to not select the text */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* CSS variables */
+:root {
+  --primary-color: #fcee0a;
+  --secondary-color: #00f0ff;
+  --black-color: #070a0d;
+  --white-color: #fff;
+  /* title font */
+  /* para font */
+  --primary-font: "PT Mono", monospace;
+  /* heading font */
+  --secondary-font: "Audiowide", sans-serif;
+  /* have to be changed */
+  --size: 16px;
+
+  /* Card color */
+  --card-color: rgb(23, 23, 23);
+
+  /* Event cards */
+  --card-height: 600px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+/* Utility classes  */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /* gap: 10px; */
+}
+
+/* General styles */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--black-color);
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--secondary-font);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  padding-block: 0 1rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+/* About styles */
+.about {
+  /* height: 90vh; */
+  margin: 3rem 0 2rem;
+  position: relative;
+  /* to make about bg black */
+  /* background-color: black; */
+}
+/* For particles canvas */
+.particles-js-canvas-el {
+  max-width: 100vw;
+  height: 100%;
+  position: absolute;
+}
+
+.cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  /* have to change - height */
+  height: 90vh;
+  /* min-height: auto; */
+  width: 89vw;
+  max-width: 1100px;
+  margin: 0 auto 1.8rem;
+  /* glass effect */
+  /* background: rgba(168, 161, 161, 0.126); */
+  background-color: black;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  border: 1px solid rgba(157, 153, 153, 0.08);
+  transition: box-shadow 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0px 9px 20px 0px rgba(252, 240, 10, 0.5),
+    0px -9px 20px 0px rgba(252, 238, 10, 0.5);
+}
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(192, 210, 75, 0.135),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    var(--primary-color),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  background-color: rgb(23, 23, 23);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+
+  position: absolute;
+  z-index: 2;
+  padding: 0 30px;
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  text-indent: 2rem;
+  text-align: center;
+}
+
+.card-img img {
+  display: block;
+  margin-inline: auto;
+  width: 60%;
+  max-width: 400px;
+}
+
+/* Events styles */
+.events {
+  min-height: auto;
+}
+
+/* Schedule Styles */
+.schedule {
+  background-color: var(--primary-color);
+  height: auto;
+  padding-block: 3rem;
+}
+
+.schedule-heading {
+  color: var(--black-color);
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Team & Sponsor styles */
+.team-sponsors {
+  height: auto;
+  padding-block: 3rem;
+}
+
+.team-sponsors .grid {
+  gap: 20px;
+}
+
+.team-sponsors h3 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sponsor {
+  grid-column: 2/8;
+  /* margin-block: 1rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  margin: 0 auto 2rem;
+  background: rgba(86, 85, 85, 0.296);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
+  transition: box-shadow 0.3s ease;
+  padding: 15px;
+}
+
+.sponsor img {
+  width: 100%;
+  height: auto;
+  transition: transform 1s;
+}
+
+.sponsor:last-child img {
+  display: block;
+  width: 90%;
+  margin-inline: auto;
+  border-radius: 20px;
+}
+
+.sponsor:hover img {
+  transform: scale(1.1);
+}
+
+.sponsor:hover {
+  box-shadow: #fcee0a 2px 2px 10px, #fcee0a -2px -2px 10px;
+}
+
+/* Swiper - photo slides */
+.team {
+  padding-inline: 1.5rem;
+}
+
+.member-name {
+  padding-block: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00f0ff;
+}
+
+.member-role {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1000px;
+  /* padding-top: 50px; */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-slide p {
+  text-align: center;
+}
+
+/* Footer styles */
+
+.flex {
+  display: flex;
+}
+.footer {
+  height: auto;
+  background-color: var(--primary-color);
+  padding: 2rem 3rem;
+}
+
+.contact.flex {
+  flex-direction: column;
+}
+
+.mail {
+  width: 140%;
+}
+
+.mail.flex,
+.contact-name.flex {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.mail p {
+  word-break: break-all;
+}
+
+.footer * {
+  color: var(--black-color);
+}
+
+.footer h4 {
+  padding-bottom: 1.2rem;
+}
+
+.footer i {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  background-color: var(--black-color);
+  padding: 0.3rem;
+  border-radius: 20%;
+}
+
+.footer > div {
+  grid-column: 2/8;
+  margin-bottom: 1rem;
+}
+
+.footer > div.contacts {
+  grid-column: 3/7;
+}
+
+.contacts > div {
+  margin-bottom: 1rem;
+}
+
+.contact-name {
+  padding-bottom: 0.3rem;
+}
+
+.address-details {
+  text-align: center;
+}
+
+.map {
+  width: 230px;
+  height: 230px;
+  border: none;
+  border: 5px solid var(--black-color);
+  border-radius: 12px;
+  /* outline: 5px solid var(--black-color); */
+  display: block;
+  margin: 0 auto 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.social-icons.flex {
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.copyrights {
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright-symbol {
+  font-size: 20px;
+}
+
+.copyrights .developer a {
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .map {
+    width: 300px;
+    height: 300px;
+  }
+  .team {
+    padding-inline: 3rem;
+  }
+
+  .sponsor {
+    grid-column: 3/7;
+    max-width: 500px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    min-height: 40vh;
+  }
+  .card > .card-content {
+    padding: 0 2rem;
+  }
+
+  .footer > div.contacts {
+    grid-column: 4/6;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 18px;
+  }
+
+  .card {
+    height: auto;
+    min-height: 60vh;
+  }
+  .card > .card-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-block: 2rem;
+  }
+
+  /* department para */
+  .card-content p {
+    text-align: left;
+    padding-right: 2rem;
+  }
+
+  .card-img {
+    width: 40%;
+  }
+  .card-text {
+    width: 60%;
+  }
+  #sympo-img {
+    order: 2;
+  }
+  /* sympo para */
+  #sympo-text p {
+    padding-left: 2rem;
+  }
+
+  .footer > div.contacts {
+    grid-column: 1/3;
+  }
+  .footer > div.address {
+    grid-column: 3/7;
+  }
+  .footer > div.socials {
+    grid-column: 7/9;
+  }
+
+  .footer {
+    padding: 3rem 4rem;
+  }
+
+  .map {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .footer {
+    padding-inline: 10%;
+  }
+}
+
+/* to hide navbar - when user is in events section */
+/* Add this class to hide the menu */
+.menu-hidden {
+  display: none;
+}
+
+/* to fix about section text overflow  */
+@media screen and (max-width: 600px) {
+  .card {
+    height: 600px;
+  }
+  .card-content p {
+    font-size: 1rem;
+    line-height: 1.2;
+    text-indent: 2rem;
+  }
+}

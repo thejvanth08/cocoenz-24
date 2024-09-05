@@ -1,0 +1,213 @@
+/* Event cards - desktop first */
+
+:root {
+  --card-height: 550px;
+  --card-width: calc(var(--card-height) / 1.5);
+  --primary-color: #fcee0a;
+  --secondary-color: #00f0ff;
+}
+
+.horizontal-sliders {
+  position: relative;
+  background-color: black;
+}
+
+/* to centering events heading */
+.event-heading-container h3 {
+  z-index: 10;
+  position: absolute;
+  top: 2rem;
+  /* relative to entire horizontal sliders width */
+  left: 10%;
+  transform: translate(-50%, -50%);
+
+  font-size: 2rem;
+  padding-top: 3rem;
+}
+.event-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 5rem auto 0;
+  /* margin-inline: auto; */
+}
+
+.event-card a {
+  outline: none;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.event-card:hover .event-wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(55deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.event-wrapper::before,
+.event-wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.event-wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.event-wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.event-card:hover .event-wrapper::before,
+.event-wrapper::after {
+  opacity: 1;
+}
+
+.event-card:hover .event-wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.event-card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 100%;
+  height: 80%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+/* fixings */
+.coding .character {
+  width: 110%;
+  top: 100px;
+}
+
+.circuit .character {
+  height: 90%;
+  top: 100px;
+}
+
+.presentation .character {
+  width: 100%;
+  height: 100%;
+  top: 100px;
+}
+
+.pitch .character {
+  top: 100px;
+}
+
+.music .character {
+  height: 90%;
+  top: 80px;
+}
+
+.quiz .character {
+  height: 90%;
+  top: 100px;
+}
+
+.event-card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.body {
+  overflow-x: hidden;
+}
+
+.horizontal-sliders {
+  display: flex;
+  flex-wrap: no-wrap;
+  /*  6 sections/events -> 6 x 100 -> no. of event cards */
+  width: 600%;
+  overflow-x: hidden;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+  /* for centering card within it's container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p.event-info {
+  text-align: center;
+  color: var(--secondary-color);
+  padding-top: 1rem;
+  font-size: 1.3rem;
+  font-family: "Audiowide", sans-serif;
+}
+
+.next-block {
+  height: auto;
+  /* background: black; */
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --card-height: 480px;
+    /* --card-width: calc(var(--card-height) / 1.5); */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --card-height: 400px;
+    /* --card-width: calc(var(--card-height) / 1.5); */
+  }
+
+  /* to be center in mobile */
+  div.event-card {
+    margin: -50px auto 0;
+  }
+}

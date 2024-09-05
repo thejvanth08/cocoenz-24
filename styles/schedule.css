@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #fcee0a;
+  --secondary-color: #00f0ff;
+  --black-color: #070a0d;
+  --white-color: #fff;
+}
+
+body {
+  overflow: hidden;
+}
+
+.timeline-outer-container {
+  width: 80vw;
+  margin: 0 auto;
+}
+.timeline p {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.timeline {
+  position: relative;
+  padding-left: 4rem;
+  margin: 0 0 0 30px;
+  color: var(--white-color);
+}
+
+/* to override the general h4 style in main.css */
+.timeline h4 {
+  text-align: left;
+}
+
+/* the vertical line */
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  /* left: 12px; */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--black-color);
+}
+.timeline .timeline-container {
+  position: relative;
+  /* to leave gap between each event container */
+  margin-bottom: 1rem;
+}
+.timeline .timeline-container .timeline-icon {
+  position: absolute;
+  left: -88px;
+  top: 4px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.7rem;
+  background: var(--black-color);
+  padding: 10px;
+}
+.timeline .timeline-container .timeline-icon i {
+  color: var(--secondary-color);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.timeline .timeline-container .timeline-body {
+  background: #171717;
+  border-radius: 3px;
+  padding: 20px 20px 15px;
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.653);
+}
+.timeline .timeline-container .timeline-body:before {
+  content: "";
+  background: inherit;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  transform: rotate(45deg);
+  border-radius: 0 0 0 2px;
+}
+.timeline .timeline-container .timeline-body .timeline-title {
+  margin-bottom: 0.5rem;
+}
+.timeline .timeline-container .timeline-body .timeline-title .badge {
+  color: var(--secondary-color);
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: rgba(143, 142, 142, 0.478);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.1px);
+  -webkit-backdrop-filter: blur(9.1px);
+}
+
+@media screen and (min-width: 600px) {
+  .timeline-outer-container {
+    max-width: 800px;
+  }
+}
+
+/* fixing vertical line */
+@media screen and (min-width: 992px) {
+  .timeline:before {
+    left: 12px;
+  }
+}

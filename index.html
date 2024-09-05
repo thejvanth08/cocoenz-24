@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COCOENZ'23</title>
+    <meta name="description" content="Welcome to COCOENZ'23 - Igniting Innovation Discover the future of technology at COCOENZ'23, an illustrious symposium meticulously crafted by the Department of Computer and Communication Engineering at Sri Sairam Institute of Technology. Scheduled for February 27, 2024, this national-level techfest transcends the ordinary, embracing the extraordinary as it champions the spirit of imagination and innovation." />
+    <meta name="keywords" content="COCOENZ'23, Sri Sairam Institute of Technology, Techfest, Symposium, National-level event, Innovation, Technology, Imagination, Technical competitions, Paper Presentation, Circuit design, Non-technical events, FM Turbo, Nostalgia Returns, Engineering, Computer and Communication Engineering, February 27, 2024, Student event, Innovation showcase, Education, Networking, Creativity, Excellence, Academic event, Igniting innovation, Holistic growth, Sri Sairam Group, Educational institutions, South India, Future of technology" />
+
+    <link rel="icon" href="images/logo/logo.png" type="image/x-icon">
+
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Particles library script -->
+    <script src="particles.js"></script>
+
+    <!-- Gsap CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Scroll reveal CDN -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <!-- Event Cards CSS -->
+    <link rel="stylesheet" href="styles/events.css" />
+    <!-- Hero CSS -->
+    <link rel="stylesheet" href="styles/hero.css" />
+    <!-- Schedule CSS -->
+    <link rel="stylesheet" href="styles/schedule.css" />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div id="top-nav" class="top-nav">
+        <div class="logo-container">
+          <img class="logo" src="images/logo/logo.png" alt="" />
+          <p class="logo-name">cocoenz</p>
+        </div>
+
+        <input
+          type="checkbox"
+          id="main-navigation-toggle"
+          class="btn btn--close"
+          title="Toggle main navigation"
+        />
+        <label for="main-navigation-toggle">
+          <span></span>
+        </label>
+        <nav id="main-navigation" class="nav-main">
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link shuffle" href="#">HOME</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link shuffle" href="#about">ABOUT</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link shuffle" href="#events">EVENTS</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link shuffle" href="#schedule">SCHEDULE</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link shuffle" href="#team">TEAM</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <!-- The video -->
+      <video
+        poster="images/hero/fallback-img.jpg"
+        autoplay="autoplay"
+        loop="loop"
+        muted="muted"
+        playsinline="playsinline"
+      >
+        <!-- <source src="bg-video.mp4" type="video/mp4; codecs=av01.0.05M.08" /> -->
+        <source
+          src="https://assets.mixkit.co/videos/preview/mixkit-purple-cyberpunk-space-with-digital-worlds-17995-large.mp4"
+          type="video/mp4; codecs=av01.0.05M.08"
+        />
+      </video>
+
+      <!-- Optional: some overlay text to describe the video -->
+      <div class="main-content">
+        <div class="hero-content">
+          <div class="title-container">
+            <h1 data-text="cocoenz'">cocoenz'</h1>
+            <h1 data-text="23" class="title-year">24</h1>
+          </div>
+          <p class="hero-quote">where ideas meet innovation</p>
+          
+          <div class="btn-container">
+            <button type="button" class="button">
+              <div class="button__label"><a class="shuffle" href="#events">Register</a></div>
+              
+            </button>
+          </div>
+        </div>
+
+        <div class="countdown" id="countdown">
+          <p class="timer-heading">Gear up, all hands on deck!</p>
+          <div class="countdown-content">
+            <div class="countdown-content-item">
+              <h2 id="days">00</h2>
+              <p>days</p>
+            </div>
+
+            <div class="countdown-content-item">
+              <h2 id="hours">00</h2>
+              <p>hrs</p>
+            </div>
+
+            <div class="countdown-content-item">
+              <h2 id="minutes">00</h2>
+              <p>mins</p>
+            </div>
+
+            <div class="countdown-content-item">
+              <h2 id="seconds">00</h2>
+              <p>secs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- About section -->
+    <section id="about" class="about">
+      <!-- Particles container + canvas -->
+      <div id="particles-js"></div>
+
+      <div id="cards" class="cards">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-img">
+              <img
+                data-aos="fade-right"
+                src="images/logo/department-logo.png"
+                alt=""
+              />
+            </div>
+            <div class="card-text">
+              <h3>COMPUTER AND COMMUNICATION ENGINEERING</h3>
+              <p data-aos="fade-left">
+                Our department offers a platform for exploring cutting-edge
+                areas like Artificial Intelligence, Machine Learning, Cloud
+                Computing, Computer Networks, Embedded Systems, Internet of
+                Things, and advanced communication engineering intricacies.
+                We're dedicated to equipping students with the knowledge to
+                drive innovation in the ever-evolving world of technology.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <div id="sympo-img" class="card-img">
+              <img data-aos="fade-left" src="images/logo/logo.png" alt="" />
+            </div>
+            <div id="sympo-text" class="card-text">
+              <h3>ABOUT COCOENZ</h3>
+              <p data-aos="fade-right">
+                COCOENZ'24 is a national-level techfest organized by the Department of Computer and Communication Engineering at Sri Sairam Institute of Technology on September 20, 2024. It celebrates innovation with four technical competitions: Triwizard Trivia (quiz), QuidUX Cup (UI/UX design), Wingardium Web-iosa (full stack development), and Hogwarts Innovation Fair (project expo). Non-technical events include Galleons & Gringotts (Monopoly), Chamber of Secrets (forensics), and The Snap of the Sorcerer (photography).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events section -->
+    <section class="events" id="events">
+      <!-- horizontal scroll starts -->
+      <div class="horizontal-sliders">
+        <div class="event-heading-container">
+          <h3 class="heading">EVENTS</h3>
+        </div>
+
+        <!-- coding -->
+        <div class="slide coding">
+          <a href="event-rules/binary.html">
+          <div class="event-card">
+            <div class="event-wrapper">
+              <img src="images/events/binary-cover.png" class="cover-image" />
+            </div>
+            <img src="images/events/binary-title.png" class="title" />
+            <img src="images/events/binary-char.png" class="character" />
+          </div>
+          <p class="event-info">Tech Quiz</p>
+          </a>
+        </div>
+
+        <!-- circuit design -->
+        <div class="slide circuit">
+          <a href="event-rules/circuit.html">
+          <div class="event-card">
+
+            <div class="event-wrapper">
+              <img src="images/events/circuit-cover.png" class="cover-image" />
+            </div>
+            <img src="images/events/circuit-title.png" class="title" />
+            <img src="images/events/circuit-char.png" class="character" />
+          </div>
+          <p class="event-info">UI/UX Designing</p>
+          </a>
+        </div>
+
+        <!-- presentation -->
+        <div class="slide presentation">
+          <a href="event-rules/paper.html">
+          <div class="event-card">
+            <div class="event-wrapper">
+              <img src="images/events/narrato-cover.png" class="cover-image" />
+            </div>
+            <img src="images/events/narrato-title.png" class="title" />
+            <img src="images/events/narrato-char.png" class="character" />
+          </div>
+          <p class="event-info">Frontend Dev</p>
+          </a>
+        </div>
+
+        <!-- product pitch -->
+        <div class="slide pitch">
+          <a href="event-rules/ceo.html">
+          <div class="event-card">
+            <div class="event-wrapper">
+              <img src="images/events/ceo-cover.png" class="cover-image" />
+            </div>
+            <img src="images/events/ceo-title.png" class="title" />
+            <img src="images/events/ceo-char.png" class="character" />
+          </div>
+          <p class="event-info">Project Expo</p>
+          </a>
+        </div>
+
+        <!-- nostalgia -->
+        <div class="slide quiz">
+          <a href="event-rules/nostalgia.html">
+          <div class="event-card">
+            <div class="event-wrapper">
+              <img
+                src="images/events/nostalgia-cover.png"
+                class="cover-image"
+              />
+            </div>
+            <img src="images/events/nostalgia-title.png" class="title" />
+            <img src="images/events/nostalgia-char.png" class="character" />
+          </div>
+          <p class="event-info">Monopoly</p>
+          </a>
+        </div>
+
+        <!-- forensic -->
+        <div class="slide quiz">
+          <a href="event-rules/nostalgia.html">
+          <div class="event-card">
+            <div class="event-wrapper">
+              <img
+                src="images/events/nostalgia-cover.png"
+                class="cover-image"
+              />
+            </div>
+            <img src="images/events/nostalgia-title.png" class="title" />
+            <img src="images/events/nostalgia-char.png" class="character" />
+          </div>
+          <p class="event-info">Forensic</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule section -->
+    <section class="schedule" id="schedule">
+      <!-- add particles -->
+      <h3 class="schedule-heading">SCHEDULE</h3>
+      <div class="timeline-outer-container">
+        <div class="timeline">
+          <!-- 1 -->
+          <div class="timeline-container">
+            <div data-aos="zoom-in" class="timeline-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div data-aos="fade-left" class="timeline-body">
+              <h4 class="timeline-title">
+                <span class="badge">10.30 am - 12.30 pm</span>
+              </h4>
+              <p>Binary Bash</p>
+            </div>
+          </div>
+          <!--        2        -->
+          <div class="timeline-container">
+            <div data-aos="zoom-in" class="timeline-icon">
+              <!-- icon here -->
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div data-aos="fade-left" class="timeline-body">
+              <h4 class="timeline-title">
+                <span class="badge">10.30 am - 12.00 pm</span>
+              </h4>
+              <p>Circuit Rix</p>
+            </div>
+          </div>
+          <!--  3-->
+          <div class="timeline-container">
+            <div data-aos="zoom-in" class="timeline-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div data-aos="fade-left" class="timeline-body">
+              <h4 class="timeline-title">
+                <span class="badge">10.30 am - 12.00 pm</span>
+              </h4>
+              <p>Be the Entrepreneur</p>
+            </div>
+          </div>
+          <!--    4    -->
+          <div class="timeline-container">
+            <div data-aos="zoom-in" class="timeline-icon">
+              <i class="fa-solid fa-person-chalkboard"></i>
+            </div>
+            <div data-aos="fade-left" class="timeline-body">
+              <h4 class="timeline-title">
+                <span class="badge">10.30 am - 12.00 pm</span>
+              </h4>
+              <p>Narrato</p>
+            </div>
+          </div>
+        
+          <!--    5    -->
+          <div class="timeline-container">
+            <div data-aos="zoom-in" class="timeline-icon">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div data-aos="fade-left" class="timeline-body">
+              <h4 class="timeline-title">
+                <span class="badge">1.00 pm - 2.30 pm</span>
+              </h4>
+              <p>Nostalgia Returns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors & Team section -->
+    <section class="team-sponsors">
+      <div id="particles-two-js"></div>
+      <!-- Sponsors -->
+      <!-- <div class="sponsors">
+        <h3>SPONSORS</h3>
+        <div class="grid">
+          <div data-aos="zoom-in-up" class="sponsor">
+            <a href="https://edgematrixcorp.com/">
+              <img src="images/sponsor/edge-sponsor.png" alt="" />
+            </a>
+          </div>
+         
+        </div>
+      </div> -->
+
+      <div id="team" class="team">
+        <h3>OUR TEAM</h3>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/team/HOD.jpg" />
+              <p class="member-name">Dr.Pachhaiammal Priya</p>
+              <p class="member-role">HOD</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/jac.jpeg" />
+              <p class="member-name">Ms.S.Jacqulin Veda Jancy</p>
+              <p class="member-role">Co-Ordinator</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/pavendan.jpeg" />
+              <p class="member-name">Dr.K.Pavendan</p>
+              <p class="member-role">Co-Ordinator</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/sakthi.jpeg" />
+              <p class="member-name">G.Sakthi</p>
+              <p class="member-role">Chair</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/mukunthen.jpeg" />
+              <p class="member-name">A.R.Mukunthan</p>
+              <p class="member-role">Vice Chair</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/akshaya.jpeg" />
+              <p class="member-name">Akshaya Kamalavasan</p>
+              <p class="member-role">Secretary</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/kerthana.jpeg" />
+              <p class="member-name">J.Keerthana</p>
+              <p class="member-role">Vice Secretary</p>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/team/rajalakshmi.jpeg" />
+              <p class="member-name">G.Rajalakshmi</p>
+              <p class="member-role">Treasurer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer grid">
+      <div class="contacts">
+        <h4>CONTACT</h4>
+
+        <div class="mail flex">
+          <i class="fa-solid fa-envelope"></i>
+          <p><a  class="shuffle" href="mailto:cocoenz@sairamit.edu.in">cocoenz@sairamit.edu.in</a></p>
+        </div>
+
+        <div class="contact flex">
+          <div class="contact-name flex">
+            <i class="fa-solid fa-phone"></i>
+            <p>Dharshan N K</p>
+          </div>
+          <p><a class="shuffle" href="tel:+919787013340">97870 13340</a></p>
+        </div>
+
+        <div class="contact flex">
+          <div class="contact-name flex">
+            <i class="fa-solid fa-phone"></i>
+            <p>Laasya Gandham</p>
+          </div>
+          <p><a class="shuffle" href="tel:+919391004710">93910 04710</a></p>
+        </div>
+      </div>
+
+      <div class="address">
+        <h4>ADDRESS</h4>
+        <div class="map-container">
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.175064770658!2d80.05065757499261!3d12.960647087353703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f51f638ddfbb%3A0xf3aef7ec7c8979ba!2sSri%20Sairam%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1697823040989!5m2!1sen!2sin"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="address-details">
+          <p>
+            <span class="bold">Sri Sai Ram Institute of Technology </span><br />
+            Sai Leo Nagar, West Tambaram, <br />
+            Chennai - 600044
+          </p>
+        </div>
+      </div>
+
+      <div class="socials">
+        <h4>SOCIALS</h4>
+        <div class="social-icons flex">
+          <a href="https://www.instagram.com/cocoenz24/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/sairamit-cce/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://instagram.com/cce_sairam?igshid=NjIwNzIyMDk2Mg=="><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@Sairam-Computercommunicationen"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+    <div class="copyrights flex">
+      <p>Developed by</span><span class="developer" title="💻"><a> Cocoenz Web Devz</a></span></p>
+    </div>
+
+    <!-- Swiper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- Main script -->
+    <script src="script.js"></script>
+  </body>
+</html>
