@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap"); */
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
 
 @font-face {
-  src: url("../font/valorant.ttf");
-  font-family: cyber-font;
+  src: url("../font/HARRYP__.TTF");
+  font-family: 'Harry P', sans-serif;
 }
 
 .main {

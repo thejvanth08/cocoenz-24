@@ -1,6 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap");
-
-/* CSS Reset */
+/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap");
+ */
+ @import url('https://fonts.cdnfonts.com/css/harry-potter');
+ @import url('https://fonts.cdnfonts.com/css/xefora');
+ /* CSS Reset */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -25,7 +27,7 @@
   --white-color: #fff;
   /* title font */
   /* para font */
-  --primary-font: "PT Mono", monospace;
+  --primary-font: 'Xéfora', sans-serif;
   /* heading font */
   --secondary-font: "Audiowide", sans-serif;
   /* have to be changed */
