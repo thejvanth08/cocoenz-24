@@ -56,7 +56,7 @@
   
 
 body {
-    background: url(/images/events/Quiz\ Background.jpg);
+    background: url(/images/events/web\ background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
@@ -105,6 +105,8 @@ svg:hover {
     transition: transform 0.5s ease-in-out;
     overflow-y: auto;
 }
+
+
 
 .container:hover {
     transform: scale(1.02);
