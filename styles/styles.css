@@ -335,16 +335,18 @@ h3 {
 }
 
 .footer * {
-  color: var(--black-color);
+  color: rgb(227, 225, 225);
 }
 
 .footer h4 {
+  font-size: 2rem;
+  color: var(--gold-color);
   padding-bottom: 1.2rem;
 }
 
 .footer i {
   font-size: 1.3rem;
-  color: var(--secondary-color);
+  color: var(--gold-color);
   background-color: var(--black-color);
   padding: 0.3rem;
   border-radius: 20%;
@@ -385,6 +387,10 @@ h3 {
 
 .bold {
   font-weight: 600;
+}
+
+.social-icons {
+  color: var(--gold-color);
 }
 
 .social-icons.flex {
