@@ -177,17 +177,17 @@ gsap.to(sections, {
 const config = {
   particles: {
     number: {
-      value: 50,
+      value: 80,
       density: {
         enable: true,
         value_area: 800,
       },
     },
     color: {
-      value: "#fcee0a",
+      value: "#f6c550",
     },
     shape: {
-      type: "circle",
+      type: "star",
       stroke: {
         width: 0,
         color: "#000000",
@@ -212,19 +212,19 @@ const config = {
       },
     },
     size: {
-      value: 3,
+      value: 3.998400639744104,
       random: true,
       anim: {
         enable: false,
-        speed: 40,
+        speed: 0,
         size_min: 0.1,
         sync: false,
       },
     },
     line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#fffccc",
+      enable: false,
+      distance: 0,
+      color: "#ffffff",
       opacity: 0.4,
       width: 1,
     },
@@ -232,7 +232,7 @@ const config = {
       enable: true,
       speed: 3,
       direction: "none",
-      random: true,
+      random: false,
       straight: false,
       out_mode: "out",
       bounce: false,
@@ -265,14 +265,14 @@ const config = {
       },
       bubble: {
         distance: 400,
-        size: 6,
+        size: 40,
         duration: 2,
-        opacity: 5,
+        opacity: 8,
         speed: 3,
       },
       repulse: {
-        distance: 100,
-        duration: 0.3,
+        distance: 200,
+        duration: 0.4,
       },
       push: {
         particles_nb: 4,

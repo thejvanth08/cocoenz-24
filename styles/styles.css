@@ -8,10 +8,8 @@
   margin: 0;
   text-decoration: none;
   outline: none;
-
   /* for custom cursor */
   cursor: url("../images/cursor.png"), auto;
-
   /* to not select the text */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -22,10 +20,12 @@
   font-family: "Harry-Potter";
   src: url("../font/harry-potter.ttf");
 }
+
 @font-face {
   font-family: "Great-Vibes";
   src: url("../font/great-vibes.ttf");
 }
+
 /* CSS variables */
 :root {
   --primary-color: #5c1321;
@@ -207,7 +207,7 @@ h3 {
 }
 
 .schedule-heading {
-  color: var(--black-color);
+  color: var(--gold-color);
   font-size: 2.5rem;
   padding-bottom: 2rem;
 }
@@ -274,7 +274,7 @@ h3 {
   padding-block: 1rem;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #00f0ff;
+  color: var(--gold-color);
 }
 
 .member-role {
@@ -412,7 +412,7 @@ h3 {
 
 .copyrights .developer a {
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--gold-color);
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
