@@ -1,10 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap"); */
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.cdnfonts.com/css/lumos');
 
 
 @font-face {
-  src: url("../font/HARRYP__.TTF");
-  font-family: 'Harry P', sans-serif;
+  src: url("../font/LUMOS.TTF");
+  font-family: 'Lumos', sans-serif;
+                                                
 }
 
 .main {
@@ -45,7 +47,7 @@
 :root {
   --color-primary: #070a0d;
   --color-secondary: #00f0ff;
-  --color-dark: #fcee0a;
+  --color-dark: #D9AB73;
   --color-light: #00f0ff;
   --font-family-primary: "PT Mono", monospace;
   --font-family-secondary: "Audiowide", sans-serif;
@@ -373,7 +375,7 @@ a {
   color: var(--color-dark);
   position: relative;
   letter-spacing: 10px;
-  text-shadow: 1px 1px 5px #00eeff58, -1px -1px 5px #00eeff5b;
+  text-shadow: 1px 1px 5px #6d5437, -1px -1px 5px #00eeff5b;
 }
 
 .title-container h1.title-year {
