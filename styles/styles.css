@@ -1,35 +1,43 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap");
- */
- @import url('https://fonts.cdnfonts.com/css/harry-potter');
- @import url('https://fonts.cdnfonts.com/css/xefora');
- /* CSS Reset */
+/* paragraph font */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* CSS Reset */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   text-decoration: none;
   outline: none;
-
   /* for custom cursor */
   cursor: url("../images/cursor.png"), auto;
-
   /* to not select the text */
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
 
+@font-face {
+  font-family: "Harry-Potter";
+  src: url("../font/harry-potter.ttf");
+}
+
+@font-face {
+  font-family: "Great-Vibes";
+  src: url("../font/great-vibes.ttf");
+}
+
 /* CSS variables */
 :root {
-  --primary-color: #fcee0a;
-  --secondary-color: #00f0ff;
+  --primary-color: #5c1321;
+  --secondary-color: #9d998d;
+  --gold-color: #f6c550;
   --black-color: #070a0d;
   --white-color: #fff;
   /* title font */
   /* para font */
-  --primary-font: 'Xéfora', sans-serif;
+  --primary-font: "PT Serif", serif;
   /* heading font */
-  --secondary-font: "Audiowide", sans-serif;
+  --secondary-font: "Great-Vibes";
   /* have to be changed */
   --size: 16px;
 
@@ -74,12 +82,13 @@ h4 {
 }
 
 h3 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  font-size: 2.5rem;
+  color: var(--gold-color);
   padding-block: 0 1rem;
 }
 
 .heading {
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -116,13 +125,12 @@ h3 {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(6.6px);
   -webkit-backdrop-filter: blur(6.6px);
-  border: 1px solid rgba(157, 153, 153, 0.08);
+  border: 1px solid rgba(157, 156, 153, 0.08);
   transition: box-shadow 0.5s;
 }
 
 .card:hover {
-  box-shadow: 0px 9px 20px 0px rgba(252, 240, 10, 0.5),
-    0px -9px 20px 0px rgba(252, 238, 10, 0.5);
+  box-shadow: 0px 9px 20px 0px #f6c4508f, 0px -9px 20px 0px #f6c4508f;
 }
 .card:hover::before {
   opacity: 1;
@@ -199,8 +207,8 @@ h3 {
 }
 
 .schedule-heading {
-  color: var(--black-color);
-  font-size: 2rem;
+  color: var(--gold-color);
+  font-size: 2.5rem;
   padding-bottom: 2rem;
 }
 
@@ -266,7 +274,7 @@ h3 {
   padding-block: 1rem;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #00f0ff;
+  color: var(--gold-color);
 }
 
 .member-role {
@@ -327,16 +335,18 @@ h3 {
 }
 
 .footer * {
-  color: var(--black-color);
+  color: rgb(227, 225, 225);
 }
 
 .footer h4 {
+  font-size: 2rem;
+  color: var(--gold-color);
   padding-bottom: 1.2rem;
 }
 
 .footer i {
   font-size: 1.3rem;
-  color: var(--secondary-color);
+  color: var(--gold-color);
   background-color: var(--black-color);
   padding: 0.3rem;
   border-radius: 20%;
@@ -379,6 +389,10 @@ h3 {
   font-weight: 600;
 }
 
+.social-icons {
+  color: var(--gold-color);
+}
+
 .social-icons.flex {
   justify-content: center;
   align-items: center;
@@ -398,7 +412,7 @@ h3 {
 
 .copyrights .developer a {
   font-weight: 700;
-  color: var(--secondary-color);
+  color: var(--gold-color);
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

@@ -1,9 +1,10 @@
-/* Event cards - desktop first */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+/* Event cards - desktop first */
 :root {
   --card-height: 550px;
   --card-width: calc(var(--card-height) / 1.5);
-  --primary-color: #fcee0a;
+  --primary-color: #f6c550;
   --secondary-color: #00f0ff;
 }
 
@@ -21,7 +22,7 @@
   left: 8.5%;
   transform: translate(-50%, -50%);
 
-  font-size: 2rem;
+  font-size: 2.5rem;
   padding-top: 3rem;
 }
 .event-cards {
@@ -185,7 +186,7 @@ p.event-info {
   color: var(--secondary-color);
   padding-top: 1rem;
   font-size: 1.3rem;
-  font-family: "Audiowide", sans-serif;
+  font-family: "PT Serif", serif;
 }
 
 .next-block {

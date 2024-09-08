@@ -1,8 +1,9 @@
 :root {
-  --primary-color: #fcee0a;
+  --primary-color: #5c1321;
   --secondary-color: #00f0ff;
   --black-color: #070a0d;
   --white-color: #fff;
+  --gold-color: #f6c550;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 .timeline p {
   font-weight: 300;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 18px;
   opacity: 0.8;
 }
 .timeline {
@@ -87,7 +88,7 @@ body {
   margin-bottom: 0.5rem;
 }
 .timeline .timeline-container .timeline-body .timeline-title .badge {
-  color: var(--secondary-color);
+  color: var(--gold-color);
   padding: 4px 8px;
   border-radius: 3px;
   font-size: 0.8rem;

@@ -1,14 +1,11 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=PT+Mono&display=swap"); */
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
-@import url('https://fonts.cdnfonts.com/css/lumos');
 
 
 @font-face {
-  src: url("../font/LUMOS.TTF");
-  font-family: 'Lumos', sans-serif;
-                                                
+  src: url("../font/HARRYP__.TTF");
+  font-family: 'Harry P', sans-serif;
 }
-
 .main {
   height: 100vh;
   position: relative;
@@ -47,10 +44,10 @@
 :root {
   --color-primary: #070a0d;
   --color-secondary: #00f0ff;
-  --color-dark: #D9AB73;
+  --color-dark: #fcee0a;
   --color-light: #00f0ff;
-  --font-family-primary: "PT Mono", monospace;
-  --font-family-secondary: "Audiowide", sans-serif;
+  --font-family-primary: "Harry-Potter";
+  --font-family-secondary: "Great-Vibes";
   --td: 150ms;
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -278,6 +275,11 @@ a {
   }
 }
 
+.z-fix {
+  position: relative;
+  top: 2px;
+}
+
 .logo {
   width: 80px;
   height: 80px;
@@ -289,11 +291,11 @@ a {
 }
 
 .logo-name {
-  font-family: cyber-font;
-  font-size: 1.7rem;
-  color: white;
+  font-family: var(--font-family-primary);
+  font-size: 2.5rem;
+  color: var(--color-dark);
   letter-spacing: 1.8px;
-  text-shadow: 2px 2px 8px var(--color-secondary);
+  text-shadow: 2px 2px 8px var(--color-dark);
   position: relative;
   /* right: 4px; */
 }
@@ -369,13 +371,13 @@ a {
 /* title */
 .title-container h1 {
   display: inline-block;
-  font-size: 5rem;
-  font-family: cyber-font;
+  font-size: 10rem;
+  font-family: var(--font-family-primary);
   font-weight: 500;
   color: var(--color-dark);
   position: relative;
   letter-spacing: 10px;
-  text-shadow: 1px 1px 5px #6d5437, -1px -1px 5px #00eeff5b;
+  text-shadow: 1px 1px 5px #00eeff58, -1px -1px 5px #00eeff5b;
 }
 
 .title-container h1.title-year {
@@ -397,12 +399,15 @@ a {
 
 .hero-quote {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-family: var(--font-family-secondary);
+  font-size: 2rem;
+  letter-spacing: 3px;
 }
 
 .timer-heading {
   padding-bottom: 1rem;
-  font-size: 1.2rem;
+  font-family: var(--font-family-secondary);
+  font-size: 2rem;
   font-weight: 600;
   color: var(--color-dark);
 }
@@ -412,12 +417,11 @@ a {
   color: var(--color-primary);
   letter-spacing: 1px;
   font-weight: 600;
-  text-decoration: line-through;
 }
 
 .button {
   background: var(--color-secondary);
-  background-color: rgb(200, 196, 196);
+  background-color: var(--color-dark);
   border: 0;
   padding: 0;
   margin: 0;
@@ -448,7 +452,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--color-dark);
+  background: var(--color-light);
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
