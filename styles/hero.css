@@ -275,6 +275,11 @@ a {
   }
 }
 
+.z-fix {
+  position: relative;
+  top: 2px;
+}
+
 .logo {
   width: 80px;
   height: 80px;
@@ -288,9 +293,9 @@ a {
 .logo-name {
   font-family: var(--font-family-primary);
   font-size: 2.5rem;
-  color: white;
+  color: var(--color-dark);
   letter-spacing: 1.8px;
-  text-shadow: 2px 2px 8px var(--color-secondary);
+  text-shadow: 2px 2px 8px var(--color-dark);
   position: relative;
   /* right: 4px; */
 }
@@ -412,12 +417,11 @@ a {
   color: var(--color-primary);
   letter-spacing: 1px;
   font-weight: 600;
-  text-decoration: line-through;
 }
 
 .button {
   background: var(--color-secondary);
-  background-color: rgb(200, 196, 196);
+  background-color: var(--color-dark);
   border: 0;
   padding: 0;
   margin: 0;
@@ -448,7 +452,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--color-dark);
+  background: var(--color-light);
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
