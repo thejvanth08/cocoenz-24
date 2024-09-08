@@ -303,7 +303,28 @@ h3 {
 .swiper-slide p {
   text-align: center;
 }
+.view-btn
+{
+ 
+  display: flex;
+  justify-content: center;
+}
+.btn
+{
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
 
+
+}
+.btn:visited {
+  color: black; 
+  background-color: white;
+}
 /* Footer styles */
 
 .flex {
@@ -314,6 +335,7 @@ h3 {
   background-color: var(--primary-color);
   padding: 2rem 3rem;
 }
+
 
 .contact.flex {
   flex-direction: column;
