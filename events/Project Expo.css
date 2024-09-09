@@ -1,8 +1,18 @@
 @import url('https://fonts.cdnfonts.com/css/harry-potter');
  @import url('https://fonts.cdnfonts.com/css/xefora');
 
+ /* paragraph font */
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+
 /* font-family: var(--primary-font); */
 /* font-family: var(--secondary-font); */
+
+@font-face {
+    font-family: "Great-Vibes";
+    src: url("../font/great-vibes.ttf");
+  }
+
 
 /* CSS variables */
 :root {
@@ -12,9 +22,10 @@
     /* title font */
     /* para font */
     --black-color: #070a0d;
-    --primary-font: 'Xéfora', sans-serif;
+    --primary-font: "PT Serif", serif;
     /* heading font */
     --secondary-font: "Audiowide", sans-serif;
+    --heading-font: "Great-Vibes";
     /* have to be changed */
     --size: 16px;
   
@@ -26,6 +37,10 @@
     --card-width: calc(var(--card-height) / 1.5);
 }
 
+h1,h2{
+  font-family: var(--heading-font);
+  text-align: center;
+}
 
 /* cars section for havign custom hilight */
 .card {
@@ -55,22 +70,18 @@
   }
   
 
-body {
-    background: url(/images/events/project\ background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  body {
+    background-color: #5c1321; /* Set the background color */
     margin: 0;
     padding: 0;
     color: #fff;
-    /* background-image: url('https://t4.ftcdn.net/jpg/07/13/56/41/360_F_713564175_8trBzWxX6MQJiB7DWQkmkDT93PEMkPVV.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: auto;
 }
+
 svg {
     display: block;
     height: 30px;
@@ -125,9 +136,9 @@ svg:hover {
     object-fit: cover;
 }
 
-h1,h2{
+/* h1,h2{
     font-family: var(--secondary-font);
-}
+} */
 #heading-title{
     color: #fcee0a;
 }
