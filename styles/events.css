@@ -168,7 +168,7 @@
   display: flex;
   flex-wrap: no-wrap;
   /*  6 sections/events -> 6 x 100 -> no. of event cards */
-  width: 600%;
+  width: 700%;
   overflow-x: hidden;
 }
 
