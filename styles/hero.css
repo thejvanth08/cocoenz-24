@@ -413,14 +413,16 @@ a {
 
 /* new btn */
 .button a {
+  text-decoration: line-through;
   color: var(--color-primary);
   letter-spacing: 1px;
   font-weight: 600;
+  cursor: not-allowed;
 }
 
 .button {
-  background: var(--color-secondary);
-  background-color: var(--color-dark);
+  cursor: not-allowed;
+  background-color: rgb(147, 146, 146);
   border: 0;
   padding: 0;
   margin: 0;
@@ -438,7 +440,6 @@ a {
   text-transform: uppercase;
   text-align: left;
   padding: 0 30px;
-  cursor: pointer;
   margin: 4rem auto 0;
 }
 .button:focus {
@@ -451,16 +452,16 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--color-light);
+  background: rgb(147, 146, 146);
   transform-origin: right;
   transform: scaleX(0);
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.button:hover:before,
+/* .button:hover:before,
 .button:focus:before {
   transform-origin: left center;
   transform: scaleX(1);
-}
+} */
 
 .button__label {
   position: relative;
